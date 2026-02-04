@@ -1,0 +1,39 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "agenttroublantstock",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-05-21",
+  "observability": {
+    "enabled": true
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+
+  // 配置 KV 存储
+  "kv_namespaces": [
+    {
+      "binding": "notion2rss",
+      "id": "f8fec6c797da4ce5b5705edae8fe3c57"
+    }
+  ],
+  // 配置 RSS
+  "vars": {
+    // 你希望转换为 RSS 的 Notion 数据库 ID
+    "N2R_NOTION_DATABASE_ID": "1e6e29bd912180839a35d7dab1e45e66",
+    // 博客的地址
+    "N2R_SITE_URL": "https://moyum.notion.site/moyum-130e29bd912180f7bee6c01cc2b09017",
+    // rss feed 的地址
+    "N2R_FEED_URL": "https://notion2rss-worker.moyum.workers.dev",
+    // 博客的名称
+    "N2R_TITLE": "moyum 的博客",
+    // 博客的语言
+    "N2R_LANGUAGE": "zh-CN",
+    // 博客的作者
+    "N2R_AUTHOR": "moyum",
+    // rss feed 的描述
+    "N2R_DESCRIPTION": "想做点有趣东西的程序员",
+    // rss feed 的图片
+    "N2R_IMAGE_URL": "https://i.imgur.com/7WJRaSx.jpeg"
+  }
+}
